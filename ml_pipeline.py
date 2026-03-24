@@ -389,8 +389,10 @@ class MLPipeline:
                             aligned[idx[0]] = p[ci]
                     all_probas_n.append(aligned)
             proba   = np.mean(all_probas_n, axis=0)
-            classes = le.classes_.astype(float)
-            expected = float(np.dot(classes, proba))
+            classes = ref_classes_n.astype(float)
+            # Align lengths in case of mismatch
+            min_len = min(len(classes), len(proba))
+            expected = float(np.dot(classes[:min_len], proba[:min_len]))
             c_min, c_max = classes.min(), classes.max()
             rel_pos  = (expected - c_min) / (c_max - c_min) if c_max > c_min else 0.5
             scaled   = scale_range[0] + rel_pos * (scale_range[1] - scale_range[0])
