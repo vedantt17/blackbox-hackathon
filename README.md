@@ -2,7 +2,6 @@
 
 > Given everything we know about 233 real people from their survey responses, predict how each specific person would answer a brand new question they have never seen.
 
-Built for the BlackBox Hackathon by UC Davis MSBA.
 
 ---
 
