@@ -1,4 +1,4 @@
-# BlackBox Hackathon — Digital Twin Pipeline
+# BlackBox — Digital Twin Pipeline
 
 > Given everything we know about 233 real people from their survey responses, predict how each specific person would answer a brand new question they have never seen.
 
